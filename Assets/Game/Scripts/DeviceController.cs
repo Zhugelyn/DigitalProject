@@ -18,7 +18,7 @@ public class DeviceController : MonoBehaviour
 
         if (joystick.Horizontal != 0 || joystick.Vertical != 0)
         {
-            transform.rotation = Quaternion.LookRotation(rigidbody.velocity);  
+            transform.rotation = Quaternion.LookRotation(rigidbody.velocity * Time.deltaTime);  
         }
     }
 }

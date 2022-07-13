@@ -19,7 +19,7 @@ public class CreateItems : MonoBehaviour
 
         for (var i = 0; i < numberItems; i++)
         {
-            var item = listItems[Random.Range(0, 3)];
+            var item = listItems[Random.Range(0, listItems.Count)];
             Vector3 position = new Vector3(Random.Range(-widthZone + xShift, widthZone + xShift), 0, 
                 Random.Range(-breadthZone + zShift, breadthZone + zShift));
             Instantiate(item, position, transform.rotation);
