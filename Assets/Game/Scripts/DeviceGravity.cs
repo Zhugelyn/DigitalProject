@@ -6,7 +6,7 @@ public class DeviceGravity : MonoBehaviour
 {
     private HashSet<Rigidbody> items = new HashSet<Rigidbody>();
     private Rigidbody rigidbody;
-    public float gravitational—onstant = 0.00f;
+    public float gravitational—onstant = 500f;
 
     private void Start()
     {

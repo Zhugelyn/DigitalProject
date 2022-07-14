@@ -2156,6 +2156,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3652453971478623393, guid: f085a1a456e70f540b547f21247adc2e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.512
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652453971478623393, guid: f085a1a456e70f540b547f21247adc2e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.359
+      objectReference: {fileID: 0}
+    - target: {fileID: 3652453971478623393, guid: f085a1a456e70f540b547f21247adc2e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.48
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f085a1a456e70f540b547f21247adc2e, type: 3}
 --- !u!4 &1212228286 stripped
@@ -2990,12 +3002,14 @@ GameObject:
   m_Component:
   - component: {fileID: 543450651789978007}
   - component: {fileID: 919132147851539247}
+  - component: {fileID: 919132147851539248}
   - component: {fileID: 642024028}
   - component: {fileID: 642024029}
   - component: {fileID: 642024030}
   - component: {fileID: 642024031}
   - component: {fileID: 642024032}
   - component: {fileID: 919132147851539246}
+  - component: {fileID: 919132147851539249}
   m_Layer: 0
   m_Name: Device2.0
   m_TagString: Untagged
@@ -3017,7 +3031,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &919132147851539247
 MonoBehaviour:
@@ -3033,7 +3047,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 919132147851539246}
   joystick: {fileID: 353014897}
-  moveSpeed: 150
+  moveSpeed: 100
+--- !u!114 &919132147851539248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147851539245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed77bc78a4ba9604e84cdeb719acc81f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "gravitational\u0421onstant": 500
+--- !u!136 &919132147851539249
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132147851539245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.7422981
+  m_Height: 2.8917792
+  m_Direction: 1
+  m_Center: {x: 0.042109966, y: -0.8334764, z: 1.8917866}
 --- !u!33 &3631933211840523278
 MeshFilter:
   m_ObjectHideFlags: 0
