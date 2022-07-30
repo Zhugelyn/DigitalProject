@@ -6,7 +6,8 @@ public class DeviceGravity : MonoBehaviour
 {
     private HashSet<Rigidbody> items = new HashSet<Rigidbody>();
     private Rigidbody rigidbody;
-    public float gravitational—onstant = 500f;
+    [SerializeField]
+    private float gravitational—onstant = 500f;
 
     private void Start()
     {
@@ -16,7 +17,9 @@ public class DeviceGravity : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.attachedRigidbody != null)
+        {
             items.Add(other.attachedRigidbody);
+        }
     }
 
     private void OnTriggerExit(Collider other)
@@ -28,10 +31,8 @@ public class DeviceGravity : MonoBehaviour
     private void FixedUpdate()
     {
         foreach (var item in items)
-        {
-            Vector3 directionToDevice = (transform.position - item.position).normalized;
-
-            item.AddForce(directionToDevice * —alculateForceGravity(item));
+        {  
+            item.AddForce(new Vector3(0, 5, 0) * —alculateForceGravity(item));
         }
     }
     public float —alculateForceGravity(Rigidbody item)
