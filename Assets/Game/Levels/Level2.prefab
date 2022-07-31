@@ -792,8 +792,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f85f8103a88f24246a0c4a4f2ab816e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listItems:
-  - {fileID: 4212223095487899925, guid: 89bf653c2cdc8e54f83e34a8c705abb6, type: 3}
+  listItemTypes:
   - {fileID: 8692990189890558275, guid: 54555761c29a20045ad3e3dbb5291dcf, type: 3}
   - {fileID: 3527177653943542849, guid: f085a1a456e70f540b547f21247adc2e, type: 3}
   zone: {fileID: 4467784179687269814}

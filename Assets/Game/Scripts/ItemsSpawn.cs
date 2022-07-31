@@ -5,7 +5,9 @@ using UnityEngine;
 public class ItemsSpawn : MonoBehaviour
 {
     [SerializeField]
-    private  List<GameObject> listItems = new List<GameObject>();
+    private  List<GameObject> listItemTypes = new List<GameObject>();
+    [SerializeField]
+    private static List<GameObject> listItemPrefabs= new List<GameObject>();
     [SerializeField]
     private GameObject zone;
     [SerializeField]
@@ -20,11 +22,18 @@ public class ItemsSpawn : MonoBehaviour
 
         for (var i = 0; i < numberItems; i++)
         {
-            var item = listItems[Random.Range(0, listItems.Count)];
+            var item = listItemTypes[Random.Range(0, listItemTypes.Count)];
             Vector3 position = new Vector3(Random.Range(-widthZone + posX, widthZone + posX), 0.5f, 
                 Random.Range(-breadthZone + posZ, breadthZone + posZ));
 
-            Instantiate(item, position, transform.rotation);
+            listItemPrefabs.Add(Instantiate(item, position, transform.rotation));
         }
     }
+
+    public static void DestroyItems()
+    {
+        foreach (var item in listItemPrefabs)
+            Destroy(item);
+    }
+
 }

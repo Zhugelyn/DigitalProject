@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
+using SortItems;
 
 namespace SortItems
 {
@@ -12,6 +12,7 @@ namespace SortItems
         public void NextLevels()
         {
             currentLevel.SetActive(false);
+            ItemsSpawn.DestroyItems();
             Instantiate(nextlevel);
             Destroy(currentLevel);
         }
